@@ -167,12 +167,16 @@ For example, filterByWord(originalFlavors, "Chocolate") should return ["Chocolat
 DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
-
-function filterByWord(/*code here*/){
-
-    /*code here*/
-
+let newArray = []
+function filterByWord(originalFlavors,nameOfFlavor){
+    for (let i=0;i<originalFlavors.length;i++){
+        if(originalFlavors[i].includes(nameOfFlavor)){
+            newArray.push(originalFlavors[i])
+        }
+    }
+    return newArray;
 }
+filterByWord(originalFlavors,'Vanilla')
 
 
 
